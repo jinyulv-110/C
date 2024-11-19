@@ -1,60 +1,58 @@
 /*
-w ÐÇÇòµÄÒ»¸öÖÖÖ²Ô°£¬±»·Ö³Émxn¸öÐ¡¸ñ×Ó£¨¶«Î÷·½Ïò mÐÐ£¬ÄÏ±±·½Ïò n ÁÐ£©¡£Ã¿¸ö¸ñ×ÓÀïÖÖÁËÒ»ÖêºÏ¸ùÖ²Îï¡£
+w æ˜Ÿçƒçš„ä¸€ä¸ªç§æ¤å›­ï¼Œè¢«åˆ†æˆmxnä¸ªå°æ ¼å­ï¼ˆä¸œè¥¿æ–¹å‘ mè¡Œï¼Œå—åŒ—æ–¹å‘ n åˆ—ï¼‰ã€‚æ¯ä¸ªæ ¼å­é‡Œç§äº†ä¸€æ ªåˆæ ¹æ¤ç‰©ã€‚
 
-ÕâÖÖÖ²ÎïÓÐ¸öÌØµã£¬ËüµÄ¸ù¿ÉÄÜ»áÑØ×ÅÄÏ±±»ò¶«Î÷·½ÏòÉìÕ¹£¬´Ó¶øÓëÁíÒ»¸ö¸ñ×ÓµÄÖ²ÎïºÏ³ÉÎªÒ»Ìå¡£
+è¿™ç§æ¤ç‰©æœ‰ä¸ªç‰¹ç‚¹ï¼Œå®ƒçš„æ ¹å¯èƒ½ä¼šæ²¿ç€å—åŒ—æˆ–ä¸œè¥¿æ–¹å‘ä¼¸å±•ï¼Œä»Žè€Œä¸Žå¦ä¸€ä¸ªæ ¼å­çš„æ¤ç‰©åˆæˆä¸ºä¸€ä½“ã€‚
 
-Èç¹ûÎÒÃÇ¸æËßÄãÄÄÐ©Ð¡¸ñ×Ó¼ä³öÏÖÁËÁ¬¸ùÏÖÏó£¬ÄãÄÜËµ³öÕâ¸öÔ°ÖÐÒ»¹²ÓÐ¶àÉÙÖêºÏ¸ùÖ²ÎïÂð£¿
+å¦‚æžœæˆ‘ä»¬å‘Šè¯‰ä½ å“ªäº›å°æ ¼å­é—´å‡ºçŽ°äº†è¿žæ ¹çŽ°è±¡ï¼Œä½ èƒ½è¯´å‡ºè¿™ä¸ªå›­ä¸­ä¸€å…±æœ‰å¤šå°‘æ ªåˆæ ¹æ¤ç‰©å—ï¼Ÿ
 
-ÊäÈëÃèÊö
-µÚÒ»ÐÐ£¬Á½¸öÕûÊý 
-m,n£¬ÓÃ¿Õ¸ñ·Ö¿ª£¬±íÊ¾¸ñ×ÓµÄÐÐÊý¡¢ÁÐÊý£¨1¡Üm,n¡Ü1000£©¡£
+è¾“å…¥æè¿°
+ç¬¬ä¸€è¡Œï¼Œä¸¤ä¸ªæ•´æ•° 
+m,nï¼Œç”¨ç©ºæ ¼åˆ†å¼€ï¼Œè¡¨ç¤ºæ ¼å­çš„è¡Œæ•°ã€åˆ—æ•°ï¼ˆ1â‰¤m,nâ‰¤1000ï¼‰ã€‚
 
-½ÓÏÂÀ´Ò»ÐÐ£¬Ò»¸öÕûÊý k (0¡Ük¡Ü10 ^5 )£¬±íÊ¾ÏÂÃæ»¹ÓÐk ÐÐÊý¾Ý¡£
-½ÓÏÂÀ´ k ÐÐ£¬Ã¿ÐÐÁ½¸öÕûÊýa£¬b£¬±íÊ¾±àºÅÎª aµÄÐ¡¸ñ×ÓºÍ±àºÅÎª bµÄÐ¡¸ñ×ÓºÏ¸ùÁË¡£
+æŽ¥ä¸‹æ¥ä¸€è¡Œï¼Œä¸€ä¸ªæ•´æ•° k (0â‰¤kâ‰¤10 ^5 )ï¼Œè¡¨ç¤ºä¸‹é¢è¿˜æœ‰k è¡Œæ•°æ®ã€‚
+æŽ¥ä¸‹æ¥ k è¡Œï¼Œæ¯è¡Œä¸¤ä¸ªæ•´æ•°aï¼Œbï¼Œè¡¨ç¤ºç¼–å·ä¸º açš„å°æ ¼å­å’Œç¼–å·ä¸º bçš„å°æ ¼å­åˆæ ¹äº†ã€‚
 
-¸ñ×ÓµÄ±àºÅÒ»ÐÐÒ»ÐÐ£¬´ÓÉÏµ½ÏÂ£¬´Ó×óµ½ÓÒ±àºÅ¡£
+æ ¼å­çš„ç¼–å·ä¸€è¡Œä¸€è¡Œï¼Œä»Žä¸Šåˆ°ä¸‹ï¼Œä»Žå·¦åˆ°å³ç¼–å·ã€‚
 */
-
-#include<iostream>
-#include<vector>
-int parent[1010], cnt[1010];
+#include <bits/stdc++.h>
 using namespace std;
 
-// Ñ°ÕÒ¸ù½Úµã
-int findRoot(int x) {
-    if (x != parent[x]) {
-        parent[x] = findRoot(parent[x]); // Â·¾¶Ñ¹Ëõ£¬½«xµ½¸ù½ÚµãµÄÂ·¾¶ÉÏµÄËùÓÐ½ÚµãµÄ¸¸½Úµã¶¼Ö¸Ïò¸ù½Úµã
+int m,n;
+int k;
+int f[1000005] = {0};
+set<int> s;
+
+void init_cha(){
+    for(int i=1;i<=m*n;i++){
+        f[i] = i;
     }
-    return parent[x];
 }
 
-int main() {
-    int m, n, k, t = 1;
-    cin >> m >> n;
-    // ³õÊ¼»¯²¢²é¼¯
-    for (int i = 1; i <= m * n; i++) {
-        parent[i] = i; // ³õÊ¼»¯Ã¿¸ö½ÚµãµÄ¸¸½ÚµãÎª×ÔÉí
-        cnt[i] = 1; // Ã¿¸ö¼¯ºÏÖÐ½ÚµãÊýÁ¿³õÊ¼»¯Îª1
+int find_cha(int n){
+    if(f[n]==n){
+        return n;
+    }else{
+        f[n] = find_cha(f[n]);
+        return f[n];
     }
-    cin >> k;
-    // ´¦ÀíºÏ²¢¸ùµÄÇé¿ö
-    for (int i = 0; i < k; i++) {
-        int a, b;
-        cin >> a >> b;
-        int rootA = findRoot(a); // ²éÕÒaµÄ¸ù½Úµã
-        int rootB = findRoot(b); // ²éÕÒbµÄ¸ù½Úµã
-        if (rootA != rootB) { // Èç¹ûaºÍbµÄ¸ù½Úµã²»Í¬£¬ËµÃ÷ÐèÒªºÏ²¢
-            parent[rootB] = rootA; // ½«bµÄ¸ù½ÚµãÉèÖÃÎªaµÄ¸ù½ÚµãµÄ×Ó½Úµã
-            cnt[rootA] += cnt[rootB]; // ¸üÐÂaËùÔÚ¼¯ºÏµÄ½ÚµãÊýÁ¿
-        }
+}
+
+void merge_cha(int a,int b){
+    f[find_cha(a)] = find_cha(b);
+} 
+
+int main(){
+    cin>>m>>n>>k;
+    init_cha();
+    for(int i=0;i<k;i++){
+        int a,b;
+        cin>>a>>b;
+        merge_cha(a,b);
     }
-    // Í³¼ÆºÏ¸ùÖ²ÎïÊýÁ¿
-    int ans = 0;
-    for (int i = 1; i <= m * n; i++) {
-        if (parent[i] == i) { // Èç¹û½ÚµãµÄ¸¸½ÚµãÊÇ×ÔÉí£¬ËµÃ÷ËüÊÇÒ»¸ö¼¯ºÏµÄ¸ù½Úµã
-            ans++; // Í³¼ÆºÏ¸ùÖ²ÎïµÄÊýÁ¿
-        }
+    for(int i=1;i<=m*n;i++){
+        s.insert(find_cha(i));
     }
-    cout << ans;
+    cout<<s.size();
+    
     return 0;
 }
