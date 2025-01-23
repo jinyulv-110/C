@@ -1,56 +1,48 @@
- #include <stdio.h>
-//最小值往前放
-void SelectSort(int arr[], int len)
-{
-	if (len < 1 || arr == nullptr) return;
- 
-	for (int i = 0; i < len; i++)
-	{
-		int minindex = i;//用来保存最小值的索引
-		for (int j = i + 1; j < len; j++)
-		{
-			if (arr[j] < arr[index])
-			{
-				index = j;
-			}
-		}
-		int temp = arr[i];
-		arr[i] = arr[index]
-		arr[index] = temp;
-	}
-}
-//最大值往后放
-void SelectSort1(int arr[], int len)
-{
-	if (len < 1 || arr == nullptr) return;
- 
-	for (int i = len-1; i > 0; --i)
-	{
-		int index = i;//用来保存最大值的索引
-		for (int j = 0; j < i; j++)
-		{
-			if (arr[j] > arr[index])
-			{
-				index = j;
-			}
-		}
-		int temp = arr[index];
-         arr[index] = arr[i];
-         arr[i] = temp;
-        }
-	}
-}
+//选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理如下。
+//首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，
+//然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。
+#include <stdio.h>
 
-void PrintAddr(int arr[], int len)
-{
-	for (int i = 0; i < len; i++)
-		printf("%d ", arr[i]);
-	printf("\n");
+// 函数声明
+void selection_sort(int a[], int len);
+ 
+int main() {
+    int arr[] = { 22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70 };
+    int len = sizeof(arr) / sizeof(arr[0]);  // 计算数组长度
+ 
+    selection_sort(arr, len);  // 调用选择排序函数
+ 
+    // 打印排序后的数组
+    for (int i = 0; i < len; i++) {
+        printf("%d ", arr[i]);
+    }
+ 
+    return 0;
 }
-int main()
-{
-	int arr[] = { 9,1,2,5,7,4,8,6,3,5 };
-	int len = sizeof(arr) / sizeof(arr[0]);
-	SelectSort(arr, len);
-	PrintAddr(arr, len);
+ 
+// 选择排序函数
+void selection_sort(int a[], int len) {
+    for (int i = 0; i < len - 1; i++) {
+        int min = i;  // 记录最小值的位置，第一个元素默认最小
+        for (int j = i + 1; j < len; j++) {
+            if (a[j] < a[min]) {  // 找到目前最小值
+                min = j;  // 记录最小值的位置
+            }
+        }
+        // 交换两个变量
+        if (min != i) {
+            int temp = a[min];
+            a[min] = a[i];
+            a[i] = temp;
+        }
+    }
 }
+ 
+/*
+// 自定义交换函数
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+*/
